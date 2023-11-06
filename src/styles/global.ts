@@ -28,13 +28,6 @@ export const GlobalStyle = createGlobalStyle`
 
    h1{
         font-weight: 700;
-        font-size: 2rem;
-        color: ${props => props.theme['base-title']};
-   }
-
-   span{
-        font-weight: 700;
-        font-size: 2.4rem;
         color: ${props => props.theme['base-title']};
    }
 
@@ -52,6 +45,10 @@ export const GlobalStyle = createGlobalStyle`
         text-overflow: ellipsis;
    }
 
+   input{
+        border: 0;
+        border-radius: 8px;
+   }
 
     a:hover {
         filter: brightness(.6);
