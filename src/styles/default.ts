@@ -1,6 +1,8 @@
 import 'styled-components';
 
 export const defaultTheme = {
+
+    //color: ${props => props.theme['Color']};
     white: '#fff',
     blue: '#3294F8',
     'base-title': '#E7EDF4',

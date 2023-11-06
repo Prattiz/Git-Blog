@@ -1,11 +1,11 @@
 import { Container } from "./styles"
 
 
-export function MainHeader() {
+export function InfoHeader() {
 
     return (
         <Container>
-            hello world
+            content
         </Container>
     )
 }
