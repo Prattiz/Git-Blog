@@ -29,6 +29,7 @@ export const GlobalStyle = createGlobalStyle`
    h1{
         font-weight: 700;
         color: ${props => props.theme['base-title']};
+        font-size: 2.4rem;
    }
 
    a{
