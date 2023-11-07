@@ -32,7 +32,7 @@ export function InfoHeader() {
           bio,
         } = response.data;
 
-        const UserObj = {
+        const userInfo = {
           name,
           image: avatarUrl,
           followers,
@@ -42,7 +42,7 @@ export function InfoHeader() {
           company,  
         };
 
-        setUser(UserObj)
+        setUser(userInfo)
       }, [])
 
       useEffect(() => {

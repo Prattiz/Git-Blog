@@ -17,6 +17,11 @@ export const Container = styled.div`
         border-radius: 8px;
         margin-right: 2rem;
     }
+
+    i{
+        margin: 0 8px;
+    }
+    
 `
 
 export const Description = styled.div`
@@ -37,13 +42,11 @@ export const Description = styled.div`
         margin-top: 24px;
         position: absolute;
         bottom: 0;
-
     }
 
     span{
         color: ${props => props.theme['base-subtitle']};
         display: flex;
-        gap: 8px;
         align-items: center;
 
         svg{

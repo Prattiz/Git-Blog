@@ -1,5 +1,6 @@
-import { Container } from "./styles";
+import { Container, Content } from "./styles";
 import { Header } from "../../components/Header";
+import {MainHeader} from "./components/MainHeader"
 
 
 export function Post() {
@@ -7,7 +8,9 @@ export function Post() {
     return (
         <Container>
             <Header/>
-            hello world Post
+            <Content>
+                <MainHeader/>
+            </Content>
         </Container>
     )
 }
