@@ -14,3 +14,10 @@ export const Content = styled.main`
     flex-direction: column;
     gap:5rem;
 `
+
+export const CardPost = styled.div`
+
+    background-color: red;
+    height: 26rem;
+    padding: 3.2rem;
+`

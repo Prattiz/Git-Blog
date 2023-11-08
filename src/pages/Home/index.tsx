@@ -1,10 +1,12 @@
-import { Header } from "../../components/Header"
-import { InfoHeader } from "./components/InfoHeader"
-import { Search } from "./components/Search"
-import { Container, Content } from "./styles"
+import { Header } from "../../components/Header";
+import { CardPost } from "./components/CardPost";
+import { InfoHeader } from "./components/InfoHeader";
+import { Search } from "./components/Search";
+import { Container, Content } from "./styles";
 
 
 export function Home() {
+
 
     return (
         <Container>
@@ -12,6 +14,7 @@ export function Home() {
             <Content>
                 <InfoHeader/>
                 <Search/>
+                <CardPost/>
             </Content>
 
         </Container>

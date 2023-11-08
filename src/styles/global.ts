@@ -17,6 +17,7 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Nunito', sans-serif;
         font-weight: 400;
         background-color: ${props => props.theme['base-background']};
+        
 
         *::-webkit-scrollbar {
             width: 2rem;
@@ -43,12 +44,17 @@ export const GlobalStyle = createGlobalStyle`
 
    p{
         color: ${props => props.theme['base-text']};
-        text-overflow: ellipsis;
+        
    }
 
    input{
         border: 0;
         border-radius: 8px;
+   }
+
+   button{
+        border: 0;
+        cursor: pointer;
    }
 
     a:hover {
