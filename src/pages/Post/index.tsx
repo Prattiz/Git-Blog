@@ -3,6 +3,7 @@ import { Header } from "../../components/Header";
 import {MainHeader} from "./components/MainHeader"
 
 
+
 export function Post() {
 
     return (
