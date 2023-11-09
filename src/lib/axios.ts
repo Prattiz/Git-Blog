@@ -8,4 +8,4 @@ export const api = axios.create({
 //Replace to your Git Hub username and repository here:
 
 export const UserGitHub = "prattiz";
-export const UserRepos = "git-blog"
+export const UserRepos = "git-blog";

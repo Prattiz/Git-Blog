@@ -1,13 +1,15 @@
 import { Container } from "./styles"
 
-
-export function Search() {
+interface ValueProp{
+    value: number
+}
+export function Search({value}: ValueProp) {
 
     return (
         <Container>
             <div>
                 <h1>Publicações</h1>
-                <span>6 Publicações</span>
+                <span>{value} Publicaç{value == 1? "ão" : "ões"}</span>
             </div>
 
             <input type="text" placeholder="Buscar Conteúdo"/>
