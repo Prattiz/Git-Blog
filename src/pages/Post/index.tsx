@@ -19,10 +19,10 @@ interface SelectedPostProps {
 export function Post() {
 
     const [ selectedPost, setSelectedPost ] = useState<SelectedPostProps>({} as SelectedPostProps);
-    const { id } = useParams();
+    const { number } = useParams();
 
     const getSelectedPost = useCallback(async () => {
-        const response = await api.get(`/repos/prattiz/git-blog/issues/1`);
+        const response = await api.get(`/repos/prattiz/git-blog/issues/${number}`);
         const {
             title,
             comments,
@@ -40,7 +40,7 @@ export function Post() {
             createdAt: formatDate(createdAt),
             url: htmlUrl,
           })
-      }, [id])
+      }, [number])
     
       useEffect(() => {
         getSelectedPost()
