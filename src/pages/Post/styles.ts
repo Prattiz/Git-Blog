@@ -9,6 +9,10 @@ export const Content = styled.main`
     display: flex;
     flex-direction: column;
     gap:5rem;
+
+    p{
+        margin-bottom: 5rem;
+    }
 `
 
 export const MainHeader = styled.div`

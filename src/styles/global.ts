@@ -17,14 +17,6 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Nunito', sans-serif;
         font-weight: 400;
         background-color: ${props => props.theme['base-background']};
-        
-
-        *::-webkit-scrollbar {
-            width: 2rem;
-            height: 2rem;
-            border-radius: 100rem;
-            color: ${props => props.theme['white']};
-        }
    }
 
    h1{
@@ -60,4 +52,15 @@ export const GlobalStyle = createGlobalStyle`
     a:hover {
         filter: brightness(.6);
     }
+
+    ::-webkit-scrollbar {
+          width: 1.2rem;
+          border-radius: .3rem;
+          background-color: ${props => props.theme['base-label']};
+     }
+
+     ::-webkit-scrollbar-thumb {
+          background-color: ${props => props.theme['blue']}; 
+          border-radius: 6px; 
+     }
 `

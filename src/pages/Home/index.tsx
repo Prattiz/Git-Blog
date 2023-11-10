@@ -1,21 +1,41 @@
 import { Header } from "../../components/Header";
-import { InfoHeader } from "./components/InfoHeader";
+import { InfoHeader } from "./InfoHeader";
 import { Container, Content, Card, CardPost, Search } from "./styles";
 import { formatDate } from "../../utils/formatDate";
-import { useContext } from 'react';
-import { GitPostContext } from "../../Context/context";
+import { useCallback, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { UserGitHub, UserRepos, api } from "../../lib/axios";
 
 
-
-
-
-
+export interface PostProps {
+    title: string
+    body: string
+    created_at: string
+    number: number
+}
 
 export function Home() {
 
-    const { post, counterPost, allCardPosts, handleButtonPost } = useContext(GitPostContext);
+    const [ post, setPost ] = useState<PostProps[]>([] as PostProps[]);
+    const navigate = useNavigate();
+    const [ counterPost, setCounterPost] = useState(0);
+    
 
+    const allCardPosts = useCallback(async (query: string | null) => {
+        const response = await api.get(`search/issues?q=${query}is:issue%20is:open%20repo:${UserGitHub}/${UserRepos}`);
+        
+        setPost(response.data.items)
+        setCounterPost(response.data.total_count)
+    }, [])
 
+    useEffect(() => {
+        allCardPosts('')
+    }, [allCardPosts])
+
+    
+    function handleButtonPost(number : number){
+        navigate(`/post/${number}`)
+    }
 
 
     return (
@@ -38,7 +58,6 @@ export function Home() {
                 <CardPost> 
                     {
                         post?.map((item) => {
-                            
                             return(
                             <Card key={item.number}> 
                                 <button onClick={() => handleButtonPost(item.number)}>

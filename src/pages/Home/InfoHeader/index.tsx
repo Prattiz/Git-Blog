@@ -1,6 +1,6 @@
 import { Container, Description } from "./styles";
 import { useState, useCallback, useEffect } from 'react';
-import { api, UserGitHub } from "../../../../lib/axios";
+import { api, UserGitHub } from "../../../lib/axios";
 
 
 
