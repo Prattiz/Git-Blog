@@ -16,13 +16,14 @@ export interface PostProps {
 
 export function Home() {
 
+
     const [ post, setPost ] = useState<PostProps[]>([] as PostProps[]);
     const navigate = useNavigate();
     const [ counterPost, setCounterPost] = useState(0);
     
 
     const allCardPosts = useCallback(async (query: string | null) => {
-        const response = await api.get(`search/issues?q=${query}is:issue%20is:open%20repo:${UserGitHub}/${UserRepos}`);
+        const response = await api.get(`search/issues?q=${query} %20is:issue%20is:open%20repo:${UserGitHub}/${UserRepos}`);
         
         setPost(response.data.items)
         setCounterPost(response.data.total_count)
@@ -53,10 +54,12 @@ export function Home() {
                         type="text" 
                         placeholder="Buscar Issue"
                         onKeyDown={(e) => e.key === 'Enter' && allCardPosts(e.currentTarget.value)}
+                        onBlur={(e) => allCardPosts(e.currentTarget.value)}
                     />
                 </Search>
+                
                 <CardPost> 
-                    {
+                    { 
                         post?.map((item) => {
                             return(
                             <Card key={item.number}> 
