@@ -20,8 +20,7 @@ export const Container = styled.div`
 
     i{
         margin: 0 8px;
-    }
-    
+    } 
 `
 
 export const Description = styled.div`
@@ -52,5 +51,10 @@ export const Description = styled.div`
         svg{
             color: ${props => props.theme['base-label']};
         }
+    }
+
+    @media (max-width: 866px) {
+        display: flex;
+        flex-direction: column;
     }
 `

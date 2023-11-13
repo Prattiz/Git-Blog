@@ -7,5 +7,4 @@ export function Header() {
         <Container>
             <img src={BGHeader} alt="Git hub blog" />
         </Container>
-    )
-}
+    )}

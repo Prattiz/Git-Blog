@@ -4,7 +4,6 @@ import { api, UserGitHub } from "../../../lib/axios";
 
 
 
-
 interface UserProps {
     name: string,
     image: string,
